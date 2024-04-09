@@ -77,10 +77,10 @@ export const Login: FC<ILoginProps> = (props) => {
     }
     function Eye(){
         if(state === 'VISIBLE'){
-            return <AiFillEyeInvisible/>
+            return <AiFillEyeInvisible className="text-gray-800"/>
         }
         if(state === 'NOTVISIBLE'){
-            return <AiFillEye/>
+            return <AiFillEye className="text-gray-800"/>
         }
     }
     return (
@@ -88,13 +88,13 @@ export const Login: FC<ILoginProps> = (props) => {
             <form className="flex flex-col gap-2" onSubmit={handlesubmit}>
                 <div className="flex flex-col gap-1">
                 <label>your id</label>
-                <input id="username" ref={email} required className=" border rounded shadow-for_input outline-none" type="text" />
+                <input id="username" ref={email} required className=" border rounded shadow-for_input outline-none text-gray-800" type="text" />
                 </div>
                 <div className="flex flex-col gap-1" >
                 <label>your password</label>
                 <div className="relative">
                     <button onClick={setEye} type="button" className=" absolute ml-[90%] my-1"><Eye/></button>
-                    <input id="password" ref={password} required className=" border w-[100%] rounded shadow-for_input outline-none" type={`${btype}`}/>
+                    <input id="password" ref={password} required className=" border w-[100%] rounded shadow-for_input outline-none text-gray-800" type={`${btype}`}/>
                 </div>
                 </div>
                 <button className="bg-indigo-500 hover:bg-indigo-400 shadow-md rounded block w-20 h-10 m-auto mt-3
